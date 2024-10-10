@@ -1,0 +1,63 @@
+/* Define as cores principais */
+:root {
+  --fatec-red: #cc092f;
+  --fatec-white: #ffffff;
+  --fatec-dark-gray: #333333;
+  --fatec-light-gray: #f5f5f5;
+}
+
+/* Estilos gerais */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--fatec-light-gray); /* Fundo claro */
+  color: var(--fatec-dark-gray); /* Texto em cinza escuro */
+}
+
+/* Logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--fatec-red)); /* Efeito de hover com vermelho da Fatec */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--fatec-red)); /* Use o vermelho ao invés do azul */
+}
+
+/* Animação de rotação do logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Estilo dos cards */
+.card {
+  padding: 2em;
+  background-color: var(--fatec-white); /* Fundo branco para os cards */
+  border: 1px solid var(--fatec-red); /* Borda em vermelho */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--fatec-dark-gray); /* Texto cinza escuro */
+}
+
+/* Texto adicional */
+.read-the-docs {
+  color: #888; /* Mantenha o cinza padrão */
+}
