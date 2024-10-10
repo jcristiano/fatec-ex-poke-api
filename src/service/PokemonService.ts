@@ -1,7 +1,7 @@
-import { AxiosError, AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 import http from "../http";
-import { IPokemonList } from "../types/IPokemonList";
 import { IPokemonDetails } from "../types/IPokemonDetails";
+import { IPokemonList } from "../types/IPokemonList";
 
 const BASEURL = 'https://pokeapi.co/api/v2';
 
