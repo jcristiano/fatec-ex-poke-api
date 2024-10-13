@@ -8,10 +8,12 @@ const queryClient = new QueryClient();
 
 function App() {
 
+  const basename = import.meta.env.VITE_APP_BASENAME || '';
+
   return (
     <QueryClientProvider client={queryClient}>
       <PaginationProvider>
-        <BrowserRouter basename='/fatec-ex-poke-api'>
+        <BrowserRouter basename={basename}>
           <AppRoute />
         </BrowserRouter>
       </PaginationProvider>
