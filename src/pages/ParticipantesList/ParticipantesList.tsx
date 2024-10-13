@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
+import { Link } from 'react-router-dom';
 
 const ParticipantesList: React.FC = () => {
   const [participants, setParticipants] = useState<any[]>([]);
@@ -79,13 +80,14 @@ const ParticipantesList: React.FC = () => {
           </Button>
         </Grid>
         <Grid item>
-          <Button
-            variant="outlined"
-            color="secondary"
-            onClick={() => window.location.href = '/'} // Ou use Link do React Router
-          >
-            Voltar para a Home
-          </Button>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="outlined"
+              color="secondary"
+            >
+              Voltar para a Home
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </Container>
