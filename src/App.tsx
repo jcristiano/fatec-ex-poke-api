@@ -11,7 +11,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <PaginationProvider>
-        <BrowserRouter>
+        <BrowserRouter basename='/fatec-ex-poke-api'>
           <AppRoute />
         </BrowserRouter>
       </PaginationProvider>
