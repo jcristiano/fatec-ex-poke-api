@@ -15,6 +15,7 @@ import {
   TextField, 
   Typography 
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const cursos = [
   'AMS - Análise e Desenvolvimento de Sistemas',
@@ -101,6 +102,11 @@ const ParticipantesPage: React.FC = () => {
         <Typography variant="h4" align="center" gutterBottom>
           Cadastro de Aluno
         </Typography>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <Button variant="outlined" color="primary" sx={{ marginBottom: 2 }}>
+            Voltar para Home
+          </Button>
+        </Link>
 
         <form onSubmit={handleSubmit}>
           <Grid container spacing={2}>

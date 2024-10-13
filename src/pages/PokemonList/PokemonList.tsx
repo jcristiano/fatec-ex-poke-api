@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { usePokemonList } from "../../hooks/usePokemonList";
 import { IPokemonListResult } from "../../types/IPokemonList";
-import { Grid, Pagination } from "@mui/material";
+import { Button, Grid, Pagination } from "@mui/material";
 import { PokemonCard } from "../../components";
 import { usePagination } from "../../context/PaginationContext";
+import { Link } from "react-router-dom";
 
 const PokemonList: React.FC = () => {
 
@@ -29,6 +30,11 @@ const PokemonList: React.FC = () => {
 
     return (
         <div>
+            <Link to="/participantes">
+                <Button variant="contained" color="primary" sx={{ marginBottom: 2 }}>
+                    Ir para Participantes
+                </Button>
+            </Link>
             <h1>Pokemon List</h1>
             <Pagination
                 count={Math.ceil(totalCount / itemsPerPage)}
