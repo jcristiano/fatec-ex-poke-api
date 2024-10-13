@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Tell mysecret
+        run: echo "My secret is ${{ secrets.VITE_FIREBASE_API_KEY }}"
+
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       
