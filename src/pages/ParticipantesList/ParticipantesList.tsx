@@ -58,7 +58,7 @@ const ParticipantesList: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {participants.map((participant) => (
+            {false && participants.map((participant) => (
               <TableRow key={participant.id}>
                 <TableCell>{participant.matricula}</TableCell>
                 <TableCell>{participant.nomeCompleto}</TableCell>

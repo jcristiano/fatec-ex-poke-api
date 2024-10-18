@@ -4,7 +4,6 @@ import { IPokemonListResult } from "../../types/IPokemonList";
 import { getTypeColor } from "../../types/TPokemonColors";
 import { usePokemonCard } from "./usePokemonCard";
 import { Link } from "react-router-dom";
-import defaultImage from "../../assets/pokemon-not-found.png";
 
 interface PokemonCardProps {
     pokemon: IPokemonListResult;
@@ -56,9 +55,10 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon: pokemonInfo }) => {
         </StyledCard>;
     }
 
-    const spriteImage =        
-        pokemon.sprites.front_default ||
-        defaultImage;
+    const spriteImage =
+        pokemon.sprites.other?.dream_world.front_default ||
+        pokemon.sprites.other?.["official-artwork"].front_default ||
+        pokemon.sprites.front_default;
 
 
     return (
