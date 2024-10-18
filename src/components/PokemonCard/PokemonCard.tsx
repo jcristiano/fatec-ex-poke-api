@@ -56,9 +56,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon: pokemonInfo }) => {
         </StyledCard>;
     }
 
-    const spriteImage =
-        pokemon.sprites.other?.dream_world.front_default ||
-        pokemon.sprites.other?.["official-artwork"].front_default ||
+    const spriteImage =        
         pokemon.sprites.front_default ||
         defaultImage;
 
